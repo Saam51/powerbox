@@ -25,7 +25,7 @@ This should handle mapping a simple hashtable of values and looking up any refer
 ### EXAMPLE 1
 ```
 $lookup = @{
-```
+
 
 device_type='dcim/device-types'
     device_role='dcim/device-roles'
@@ -41,7 +41,7 @@ $IpAddress = @{
     status = 'active'
 }
 Set-nbIpAddress -id 22 -lookup $lookup $IpAddress
-
+```
 ### EXAMPLE 2
 ```
 Get-nbIpAddress | Foreach {$_.site = 'Seattle'; $_} | Set-nbIpAddress
